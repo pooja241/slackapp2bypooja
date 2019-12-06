@@ -149,14 +149,7 @@ app.get("/", (request, response) => {
   console.log(Date.now() + " Ping Received");
   response.sendStatus(200);
 });
-http.createServer(app).listen(app.get("port"), () => {
-   setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
-
-  console.log(`server listening on port ${app.get("port")}`);
-});
-var cronLink = require("node-cron-link");
-cronLink("https://roomy-subway.glitch.me/keepalive", {time:2, kickStart: true});
-cronLink("https://rogue-triceratops.glitch.me/keepalive", {time:2, kickStart: true});
-
+setInterval(function() {
+    http.get("https://sk-ps.herokuapp.com");
+},300000);
+app.listen(process.env.PORT);
