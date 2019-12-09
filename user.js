@@ -16,7 +16,7 @@ const nforce = require('nforce'),
       clientSecret: SF_CLIENT_SECRET,
       redirectUri:'https://localhost:3000/oauth/_callback',
       mode:'single',
-      environment: 'sandbox',
+      environment: 'production',
       autoRefresh: true
     });
 
