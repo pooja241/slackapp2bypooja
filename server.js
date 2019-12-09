@@ -150,6 +150,6 @@ app.get("/", (request, response) => {
   response.sendStatus(200);
 });
 setInterval(function() {
-    http.get("https://sk-ps.herokuapp.com");
+    http.get("https://assignowner.herokuapp.com");
 },300000);
 app.listen(process.env.PORT);
